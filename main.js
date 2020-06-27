@@ -15,22 +15,26 @@ const rl = readline.createInterface({
 // Write code here
 // Use the unit test to see what is expected
 const rockPaperScissors = (hand1, hand2) => { 
-  if(hand1 === hand2) {
-    return 'Tie';
-  } else if(hand1 === 'rock' && hand2 === 'scissors') {
-    return 'hand1 wins';
-  } else if(hand1 === 'rock' && hand2 === 'paper') {
-    return 'hand2 wins';
-  } else if(hand1 === 'scissors' && hand2 === 'rock') {
-    return 'hand2 wins';
-  } else if(hand1 === 'scissors' && hand2 === 'paper') {
-    return 'hand1 wins';
-  } else if(hand1 === 'paper' && hand2 === 'scissors') {
-    return 'hand2 wins';
-  } else if(hand1 === 'paper' && hand2 === 'rock') {
-    return 'hand1 wins';
+  let player1 = hand1.toLowerCase();
+  let player2 = hand2.toLowerCase();
+  let input1 = player1.trim();
+  let input2 = player2.trim();
+  if(input1 === input2) {
+    return "It's a tie!";
+  } else if(input1 === 'rock' && input2 === 'scissors') {
+    return "Hand one wins!";
+  } else if(input1 === 'rock' && input2 === 'paper') {
+    return "Hand two wins!";
+  } else if(input1 === 'scissors' && input2 === 'rock') {
+    return "Hand two wins!";
+  } else if(input1 === 'scissors' && input2 === 'paper') {
+    return "Hand one wins!";
+  } else if(input1 === 'paper' && input2 === 'scissors') {
+    return "Hand two wins!";
+  } else if(input1 === 'paper' && input2 === 'rock') {
+    return "Hand one wins!";
   } else {
-    return 'not valid input';
+    return "not valid input";
   }
 }
 
