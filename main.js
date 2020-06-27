@@ -14,7 +14,7 @@ const rl = readline.createInterface({
 // the function that will be called by the unit test below
 // Write code here
 // Use the unit test to see what is expected
-const rockPaperScissors = (hand1, hand2) => {
+const rockPaperScissors = (hand1, hand2) => { 
   if(hand1 === hand2) {
     return 'Tie';
   } else if(hand1 === 'rock' && hand2 === 'scissors') {
@@ -26,9 +26,11 @@ const rockPaperScissors = (hand1, hand2) => {
   } else if(hand1 === 'scissors' && hand2 === 'paper') {
     return 'hand1 wins';
   } else if(hand1 === 'paper' && hand2 === 'scissors') {
-    return 'hand2 wins'
+    return 'hand2 wins';
   } else if(hand1 === 'paper' && hand2 === 'rock') {
-    return 'hand1 wins'
+    return 'hand1 wins';
+  } else {
+    return 'not valid input';
   }
 }
 
